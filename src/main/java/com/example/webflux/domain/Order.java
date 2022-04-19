@@ -3,6 +3,7 @@ package com.example.webflux.domain;
 //import com.krupenia.domain.user.User;
 import lombok.*;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.UUID;
 
@@ -12,10 +13,10 @@ import java.util.UUID;
 @Setter
 @Getter
 //@Entity
-//@Table(name = "orders")
+@Table(value = "orders")
 public class Order {
     @Id
-    Long orderId;
+    Integer orderId;
 //    @Column
     Integer quantity;
 //    @ManyToOne(fetch = FetchType.LAZY)
